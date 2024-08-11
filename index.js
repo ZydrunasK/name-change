@@ -19,6 +19,7 @@ function hello(name) {
            }
         }
     }
+    
     if (typeof name !== 'string') {
     return 'ERROR: Input must be a string'
     } 
@@ -59,8 +60,8 @@ console.log(hello('Marija'));
 console.log(hello('Žavi'));
 console.log(hello('Sherry'));
 console.log(hello('M4rji4'));
-console.log(hello());
 console.log(hello(123));
+console.log(hello());
 
 
 
