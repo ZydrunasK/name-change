@@ -40,14 +40,14 @@ function hello(name) {
         name += 'au'
         return  `Labas, ${name}!`;
     }
-    if (name.slice(endOne, end) === 'i' || 'y' || 'a') {
-        return  `Labas, ${name}!`;
-    }
     if (name.slice(endOne, end) === 'ė') {
         name = name.slice(0, endOne);
         name += 'e';
         return  `Labas, ${name}!`;
     }  
+    if (name.slice(endOne, end) === 'i' || 'y' || 'a') {
+        return  `Labas, ${name}!`;
+    }
     return `ERROR: Incorrect input`;
 }
 
