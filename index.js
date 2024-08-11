@@ -12,10 +12,10 @@ function hello(name) {
     let endTwo = name.length - 2;
 
 
-    if (typeof name === 'string') {
-        for (let i = 0; i < 10; i++) {
-           if (name.includes(`${i}`)) {
-            return 'ERROR: Input contains numbers'
+    if (typeof name === 'string') {                 // why do you need an if? (my brain too small)
+        for (let i = 0; i < 10; i++) {              // loops trough 10 numbers
+           if (name.includes(`${i}`)) {             // checks if any of the 10 numbers are in the string
+            return 'ERROR: Input cannot contains numbers'
            }
         }
     }
@@ -23,7 +23,6 @@ function hello(name) {
     if (typeof name !== 'string') {
     return 'ERROR: Input must be a string'
     } 
-
 
     if (name.slice(endTwo, end) === 'as') {
         name = name.slice(0, endTwo);
@@ -65,13 +64,24 @@ console.log(hello());
 
 
 
+/* 
+console.clear();
+let name = 'Justinas';
+console.log(name.slice(name.length - 2, name.length));
+
+let badword = 'as3d';
+let badword2 = 'asd';
+
+function catcher(wr) {
+    for (let i = 0; i < 10; i++) {
+        if (wr.includes(`${i}`)) {
+            return 'yes'
+        }
+    }
+    return 'no';
+}
+  console.log(catcher(badword));
+  console.log(catcher(badword2)); */
+    
 
 
-
-
-
-
-
-
-/* let name = 'Justinas';
-console.log(name.slice(name.length - 2, name.length)); */
