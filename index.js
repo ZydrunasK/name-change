@@ -11,11 +11,10 @@ function hello(name) {
     let endOne = name.length - 1;
     let endTwo = name.length - 2;
 
-
     if (typeof name === 'string') {                 // why do you need an if? (my brain too small)
         for (let i = 0; i < 10; i++) {              // loops trough 10 numbers
            if (name.includes(`${i}`)) {             // checks if any of the 10 numbers are in the string
-            return 'ERROR: Input cannot contains numbers'
+            return 'ERROR: Input cant contain numbers'
            }
         }
     }
@@ -81,7 +80,8 @@ function catcher(wr) {
     return 'no';
 }
   console.log(catcher(badword));
-  console.log(catcher(badword2)); */
+  console.log(catcher(badword2)); 
+*/
     
 
 
