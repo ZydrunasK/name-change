@@ -10,37 +10,33 @@ function hello(name) {
         return 'Error: No input found'
     }
 
-    let end = name.length;
-    let endOne = name.length - 1;
-    let endTwo = name.length - 2;
-
     for (let i = 0; i < 10; i++) {              // loops trough 10 numbers
         if (name.includes(`${i}`)) {             // checks if any of the 10 numbers are in the string
         return 'ERROR: Input cant contain numbers'
         }
     };
 
-    if (name.slice(endTwo, end) === 'as') {
-        name = name.slice(0, endTwo);
+    if (name.slice(-2) === 'as') {
+        name = name.slice(0, -2);
         name += 'ai'
         return `Labas, ${name}!`;
     }
-    if (name.slice(endTwo, end) === 'is') {
-        name = name.slice(0, endTwo);
+    if (name.slice(-2) === 'is') {
+        name = name.slice(0, -2);
         name += 'i'
         return  `Labas, ${name}!`;
     }
-    if (name.slice(endTwo, end) === 'us') {
-        name = name.slice(0, endTwo);
+    if (name.slice(-2) === 'us') {
+        name = name.slice(0, -2);
         name += 'au'
         return  `Labas, ${name}!`;
     }
-    if (name.slice(endOne, end) === 'ė') {
-        name = name.slice(0, endOne);
+    if (name.slice(-1) === 'ė') {
+        name = name.slice(0, -1);
         name += 'e';
         return  `Labas, ${name}!`;
     }  
-    if (name.slice(endOne, end) === 'i' || 'y' || 'a') {
+    if (name.slice(-1) === 'i' || 'y' || 'a') {
         return  `Labas, ${name}!`;
     }
     return `ERROR: Incorrect input`;
@@ -49,13 +45,13 @@ function hello(name) {
 console.log(hello('Jonas'));
 console.log(hello('Gedutis'));
 console.log(hello('Ivijus'));
-console.log(hello('Petrus'));
 console.log(hello('Indrė'));
 console.log(hello('Marija'));
 console.log(hello('Žavi'));
 console.log(hello('Sherry'));
 console.log(hello('M4rji4'));
 console.log(hello(123));
+console.log(hello(''));
 console.log(hello());
 
 
