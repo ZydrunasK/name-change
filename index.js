@@ -3,6 +3,9 @@ function hello(name) {
     if (name === undefined)  {
         return 'Error: No input found'
     }
+    if (typeof name !== 'string') {
+    return 'ERROR: Input must be a string'
+    } 
     if (name === '')  {
         return 'Error: No input found'
     }
@@ -11,17 +14,11 @@ function hello(name) {
     let endOne = name.length - 1;
     let endTwo = name.length - 2;
 
-    if (typeof name === 'string') {                 // why do you need an if? (my brain too small)
-        for (let i = 0; i < 10; i++) {              // loops trough 10 numbers
-           if (name.includes(`${i}`)) {             // checks if any of the 10 numbers are in the string
-            return 'ERROR: Input cant contain numbers'
-           }
+    for (let i = 0; i < 10; i++) {              // loops trough 10 numbers
+        if (name.includes(`${i}`)) {             // checks if any of the 10 numbers are in the string
+        return 'ERROR: Input cant contain numbers'
         }
-    }
-    
-    if (typeof name !== 'string') {
-    return 'ERROR: Input must be a string'
-    } 
+    };
 
     if (name.slice(endTwo, end) === 'as') {
         name = name.slice(0, endTwo);
